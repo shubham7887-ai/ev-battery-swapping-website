@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EV Battery Swapping</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+     .video-container {
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+    }
+
+    .quiz {
+      margin-top: 20px;
+    }
+
+    .quiz button {
+      margin: 5px;
+      padding: 10px 15px;
+      background-color:blue;
+      color: white;  
+    } 
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EV Battery Swapping</h1>
+    <p>Learn how it works and test your knowledge!</p>
+  </header>
+
+  <section>
+    <h2>What is Battery Swapping?</h2>
+    <p>
+      Battery swapping is a method where electric vehicle (EV) batteries can be replaced quickly 
+      at a station instead of waiting to charge.
+    </p>
+  </section>
+
+  <section class="video-container">
+    <h2>Watch This Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1kZgG58zz8U?si=Z5bvslukbwe_u8PO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+  </section>
+  <section class="quiz">
+    <h2>Quick Quiz</h2>
+    <p>What is a benefit of battery swapping?</p>
+    <button onclick=" checkAnswer(true)">Fast battery change</button>
+    <button onclick=" checkAnswer(false)">Longer charging time</button>
+    <p id="quizResult" class="result"></p>
+  </section>
+  <script>
+    function checkAnswer(isCorrect) {
+      const result = document.getElementById('quizResult');
+      if (isCorrect) {
+        result.textContent = " Correct!";
+        result.style.color = "green";
+      } else {
+        result.textContent = " Incorrect. Try again!";
+        result.style.color = "red";
+      }
+    }
+   </script>
+
+</body>
+</html>
